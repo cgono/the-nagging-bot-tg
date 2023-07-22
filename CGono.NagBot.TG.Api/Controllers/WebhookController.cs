@@ -25,6 +25,6 @@ public class WebhookController : ControllerBase
     public IActionResult TestReply(string testMessage)
     {
         this._logger.LogInformation("Received test message: {testMessage}", testMessage);
-        return Ok();
+        return Ok(new { message = testMessage });
     }
 }
