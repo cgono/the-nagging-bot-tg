@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace CGono.TG.NagBot.Api.Controllers;
+namespace CGono.NagBot.TG.Api.Controllers;
 
 /// <summary>
 /// Controller for handling webhook requests from Telegram.
@@ -22,7 +22,7 @@ public class WebhookController : ControllerBase
     /// <param name="testMessage"></param>
     /// <returns></returns>
     [HttpGet(Name = "GetWebhook")]
-    public async Task<IActionResult> TestReply(string testMessage)
+    public IActionResult TestReply(string testMessage)
     {
         this._logger.LogInformation("Received test message: {testMessage}", testMessage);
         return Ok();

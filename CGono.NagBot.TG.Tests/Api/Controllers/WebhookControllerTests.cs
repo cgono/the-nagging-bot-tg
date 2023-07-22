@@ -1,11 +1,9 @@
-using CGono.TG.NagBot.Api.Controllers;
+using CGono.NagBot.TG.Api.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Xunit;
-using System.Threading.Tasks;
 
-namespace CGono.TG.NagBot.Tests.Api.Controllers
+namespace CGono.NagBot.TG.Tests.Api.Controllers
 {
     public class WebhookControllerTests
     {
@@ -19,13 +17,13 @@ namespace CGono.TG.NagBot.Tests.Api.Controllers
         }
 
         [Fact]
-        public async void TestReply_ReturnsOk()
+        public void TestReply_ReturnsOk()
         {
             // Arrange
             var testMessage = "test message";
 
             // Act
-            var result = await _controller.TestReply(testMessage);
+            var result = _controller.TestReply(testMessage);
 
             // Assert
             Assert.IsType<OkResult>(result);

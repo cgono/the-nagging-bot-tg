@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
+      - "5216:5216"
+      - "7153:7153" 
+    restart: always
