@@ -1,9 +1,10 @@
 name: Docker Build and Publish (Production)
 
 on:
+  push:
+    branches:
+      - main # build on push
   workflow_dispatch: # run manually
-  
-environment: Production
   
 permissions:
   id-token: write   # This is required for requesting the JWT
@@ -12,6 +13,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Production
     
     steps:
       - name: Checkout repo
