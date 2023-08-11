@@ -4,8 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CGono.NagBot.TG.Api", "CGono.NagBot.TG.Api\CGono.NagBot.TG.Api.csproj", "{9EA96BB3-0377-41BC-945A-5BB0EC2DABE8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{916B6C10-8161-409D-94AD-8739065DAE79} = {916B6C10-8161-409D-94AD-8739065DAE79}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CGono.NagBot.TG.Tests", "CGono.NagBot.TG.Tests\CGono.NagBot.TG.Tests.csproj", "{2AF8903E-332D-448B-B95A-4A6BF2E3A87E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{916B6C10-8161-409D-94AD-8739065DAE79} = {916B6C10-8161-409D-94AD-8739065DAE79}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGono.NagBot.TG.Services", "CGono.NagBot.TG.Services\CGono.NagBot.TG.Services.csproj", "{916B6C10-8161-409D-94AD-8739065DAE79}"
 EndProject
@@ -30,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FD2AFA0-9BC7-48E8-9E69-DDE627BCF500}
 	EndGlobalSection
 EndGlobal
