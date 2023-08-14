@@ -6,10 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ContainerImageName>cgono-nagbot-tg</ContainerImageName>
     <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <UserSecretsId>d4d35ce4-bc32-429b-a556-6829eb404ca5</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Sentry.AspNetCore" Version="3.35.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 

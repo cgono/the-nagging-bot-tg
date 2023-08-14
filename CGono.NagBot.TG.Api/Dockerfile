@@ -14,8 +14,8 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 
 # Expose ports
-#ENV ASPNETCORE_URLS http://*:5000
-#EXPOSE 5000
+# ENV ASPNETCORE_URLS http://*:80
+# EXPOSE 80
 
 # Run
 ENTRYPOINT ["dotnet", "CGono.NagBot.TG.Api.dll"]
